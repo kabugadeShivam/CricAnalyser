@@ -1,0 +1,1 @@
+import "./globals.css"; import type { Metadata } from "next"; export const metadata:Metadata={title:"CricAnalyser | IPL Analytics",description:"Big Data analytics dashboard for IPL match and player performance"}; export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
