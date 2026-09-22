@@ -1,0 +1,41 @@
+match_id,season,date,venue,team1,team2,toss_winner,toss_decision,winner,result,win_by_runs,win_by_wickets,player_of_match
+1001,2008,2008-04-01,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,Mumbai Indians,Chennai Super Kings,Chennai Super Kings,bat,Chennai Super Kings,normal,2,0,Piyush Chawla
+1002,2008,2008-04-01,Arun Jaitley Stadium,Kolkata Knight Riders,Rajasthan Royals,Kolkata Knight Riders,field,Kolkata Knight Riders,normal,0,9,Sunil Narine
+1003,2008,2008-04-02,Rajiv Gandhi International Cricket Stadium,Delhi Capitals,Royal Challengers Bengaluru,Royal Challengers Bengaluru,bat,Royal Challengers Bengaluru,normal,20,0,Jacques Kallis
+1004,2008,2008-04-03,Punjab Cricket Association IS Bindra Stadium,Deccan Chargers,Rajasthan Royals,Deccan Chargers,bat,Rajasthan Royals,normal,0,8,Yuzvendra Chahal
+1005,2008,2008-04-04,BRSABV Ekana Cricket Stadium,Royal Challengers Bengaluru,Deccan Chargers,Royal Challengers Bengaluru,bat,Royal Challengers Bengaluru,normal,23,0,Dinesh Karthik
+1006,2008,2008-04-05,Himachal Pradesh Cricket Association Stadium,Mumbai Indians,Rajasthan Royals,Mumbai Indians,bat,Mumbai Indians,normal,34,0,Yuzvendra Chahal
+1007,2008,2008-04-05,Punjab Cricket Association IS Bindra Stadium,Punjab Kings,Mumbai Indians,Punjab Kings,bat,Punjab Kings,normal,26,0,Gerald Coetzee
+1008,2008,2008-04-06,Narendra Modi Stadium,Delhi Capitals,Kolkata Knight Riders,Delhi Capitals,field,Kolkata Knight Riders,normal,47,0,Axar Patel
+1009,2008,2008-04-07,M. A. Chidambaram Stadium,Chennai Super Kings,Deccan Chargers,Chennai Super Kings,bat,Chennai Super Kings,normal,21,0,RP Singh
+1010,2008,2008-04-08,Himachal Pradesh Cricket Association Stadium,Deccan Chargers,Mumbai Indians,Mumbai Indians,bat,Deccan Chargers,normal,0,9,RP Singh
+1011,2008,2008-04-09,M. A. Chidambaram Stadium,Chennai Super Kings,Mumbai Indians,Mumbai Indians,bat,Chennai Super Kings,normal,0,9,Deepak Chahar
+1012,2008,2008-04-09,Punjab Cricket Association IS Bindra Stadium,Rajasthan Royals,Royal Challengers Bengaluru,Royal Challengers Bengaluru,bat,Rajasthan Royals,normal,0,9,Dinesh Karthik
+1013,2008,2008-04-10,Narendra Modi Stadium,Chennai Super Kings,Mumbai Indians,Chennai Super Kings,bat,Mumbai Indians,normal,0,8,Piyush Chawla
+1014,2008,2008-04-11,M. A. Chidambaram Stadium,Royal Challengers Bengaluru,Kolkata Knight Riders,Kolkata Knight Riders,bat,Kolkata Knight Riders,normal,7,0,Shreyas Iyer
+1015,2008,2008-04-12,Punjab Cricket Association IS Bindra Stadium,Kolkata Knight Riders,Deccan Chargers,Deccan Chargers,field,Deccan Chargers,normal,0,9,Rinku Singh
+1016,2008,2008-04-13,Punjab Cricket Association IS Bindra Stadium,Mumbai Indians,Kolkata Knight Riders,Kolkata Knight Riders,field,Kolkata Knight Riders,normal,0,10,Harshit Rana
+1017,2008,2008-04-13,Wankhede Stadium,Mumbai Indians,Punjab Kings,Punjab Kings,field,Punjab Kings,normal,0,10,Sandeep Sharma
+1018,2008,2008-04-14,BRSABV Ekana Cricket Stadium,Kolkata Knight Riders,Rajasthan Royals,Kolkata Knight Riders,field,Rajasthan Royals,normal,6,0,Riyan Parag
+1019,2008,2008-04-15,Himachal Pradesh Cricket Association Stadium,Mumbai Indians,Rajasthan Royals,Mumbai Indians,bat,Mumbai Indians,normal,46,0,Ravichandran Ashwin
+1020,2008,2008-04-16,Eden Gardens,Kolkata Knight Riders,Punjab Kings,Kolkata Knight Riders,field,Punjab Kings,normal,58,0,Sam Curran
+1021,2008,2008-04-17,Narendra Modi Stadium,Rajasthan Royals,Deccan Chargers,Deccan Chargers,field,Rajasthan Royals,normal,3,0,Rahul Tewatia
+1022,2008,2008-04-17,Punjab Cricket Association IS Bindra Stadium,Delhi Capitals,Punjab Kings,Punjab Kings,field,Delhi Capitals,normal,30,0,Axar Patel
+1023,2008,2008-04-18,Sawai Mansingh Stadium,Deccan Chargers,Rajasthan Royals,Deccan Chargers,bat,Deccan Chargers,normal,20,0,Rohit Sharma
+1024,2008,2008-04-19,M. A. Chidambaram Stadium,Kolkata Knight Riders,Punjab Kings,Kolkata Knight Riders,field,Kolkata Knight Riders,normal,0,8,Mayank Agarwal
+1025,2008,2008-04-20,Punjab Cricket Association IS Bindra Stadium,Chennai Super Kings,Deccan Chargers,Deccan Chargers,bat,Deccan Chargers,normal,2,0,Ravichandran Ashwin
+1026,2008,2008-04-21,Eden Gardens,Chennai Super Kings,Rajasthan Royals,Rajasthan Royals,field,Chennai Super Kings,normal,70,0,Sandeep Sharma
+1027,2008,2008-04-21,BRSABV Ekana Cricket Stadium,Punjab Kings,Royal Challengers Bengaluru,Royal Challengers Bengaluru,field,Royal Challengers Bengaluru,normal,0,10,Mohammed Siraj
+1028,2008,2008-04-22,Wankhede Stadium,Deccan Chargers,Delhi Capitals,Deccan Chargers,field,Delhi Capitals,normal,53,0,Tristan Stubbs
+1029,2008,2008-04-23,Punjab Cricket Association IS Bindra Stadium,Chennai Super Kings,Delhi Capitals,Delhi Capitals,bat,Delhi Capitals,normal,17,0,Axar Patel
+1030,2008,2008-04-24,Punjab Cricket Association IS Bindra Stadium,Chennai Super Kings,Deccan Chargers,Chennai Super Kings,field,Deccan Chargers,normal,20,0,Maheesh Theekshana
+1031,2008,2008-04-25,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,Delhi Capitals,Deccan Chargers,Deccan Chargers,field,Delhi Capitals,normal,6,0,Rishabh Pant
+1032,2008,2008-04-25,Himachal Pradesh Cricket Association Stadium,Kolkata Knight Riders,Deccan Chargers,Kolkata Knight Riders,field,Deccan Chargers,normal,2,0,Kuldeep Yadav
+1033,2008,2008-04-26,Wankhede Stadium,Mumbai Indians,Delhi Capitals,Delhi Capitals,bat,Delhi Capitals,normal,33,0,Prithvi Shaw
+1034,2008,2008-04-27,Arun Jaitley Stadium,Rajasthan Royals,Royal Challengers Bengaluru,Rajasthan Royals,bat,Rajasthan Royals,normal,53,0,Anuj Rawat
+1035,2008,2008-04-28,Himachal Pradesh Cricket Association Stadium,Rajasthan Royals,Mumbai Indians,Mumbai Indians,bat,Mumbai Indians,normal,22,0,Rohit Sharma
+1036,2008,2008-04-29,M. Chinnaswamy Stadium,Kolkata Knight Riders,Deccan Chargers,Deccan Chargers,field,Deccan Chargers,normal,0,3,Gautam Gambhir
+1037,2008,2008-04-29,Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium,Kolkata Knight Riders,Chennai Super Kings,Kolkata Knight Riders,field,Chennai Super Kings,normal,33,0,Ajinkya Rahane
+1038,2008,2008-04-30,Himachal Pradesh Cricket Association Stadium,Mumbai Indians,Royal Challengers Bengaluru,Royal Challengers Bengaluru,field,Royal Challengers Bengaluru,normal,0,10,Lendl Simmons
+1039,2008,2008-05-01,Himachal Pradesh Cricket Association Stadium,Rajasthan Royals,Punjab Kings,Punjab Kings,bat,Punjab Kings,normal,30,0,Prasidh Krishna
+1040,2008,2008-05-02,Eden Gardens,Deccan Chargers,Royal Challengers Bengaluru,Deccan Chargers,bat,Royal Challengers Bengaluru,normal,0,9,Mohammed Siraj
