@@ -2,6 +2,9 @@
 
 ## Big Data Analytics for IPL Match and Player Performance Using Hadoop and Apache Spark
 
+**Live Dashboard:** https://cricanalyser.vercel.app/  
+**GitHub Repository:** https://github.com/kabugadeShivam/CricAnalyser
+
 CricAnalyser is an end-to-end college **Big Data Analytics** project using **Hadoop HDFS, Apache Spark/PySpark, Spark SQL, Power BI** and a modern **Next.js analytics dashboard**.
 
 ### Architecture
@@ -253,6 +256,7 @@ Use [docs/PROJECT_REPORT.md](docs/PROJECT_REPORT.md) as the report structure and
 - [x] Deployable demo analytics snapshot
 - [x] Deployment guide
 - [x] Automated Next.js build workflow
+- [x] Live Vercel dashboard
 
 **Ready for demonstration and deployment.**
 
