@@ -246,6 +246,9 @@ Use [docs/PROJECT_REPORT.md](docs/PROJECT_REPORT.md) as the report structure and
 - [x] HDFS scripts
 - [x] Power BI design
 - [x] Optional ML extension
+- [x] Modern Next.js analytics dashboard
+- [x] Dashboard API connected to Spark processed outputs
+- [x] Interactive Overview/Batting/Bowling/Teams/Venues/Insights views
 - [ ] Run the full pipeline on the user's Windows machine
 - [ ] Build and export the final Power BI dashboard
 - [ ] Add screenshots and measured results to the report
