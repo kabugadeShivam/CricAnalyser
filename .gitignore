@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+data/raw/*.csv
+data/cleaned/*.csv
+data/processed/*.csv
+data/**/*.parquet
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Power BI
+*.pbit
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
