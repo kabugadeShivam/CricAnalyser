@@ -1,0 +1,10 @@
+{
+  "raw_matches": "data/raw/matches.csv",
+  "raw_deliveries": "data/raw/deliveries.csv",
+  "cleaned_matches": "data/cleaned/matches",
+  "cleaned_deliveries": "data/cleaned/deliveries",
+  "processed_dir": "data/processed",
+  "hdfs_raw": "/ipl/raw",
+  "hdfs_clean": "/ipl/cleaned",
+  "hdfs_processed": "/ipl/processed"
+}
