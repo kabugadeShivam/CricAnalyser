@@ -2,7 +2,7 @@
 
 ## Big Data Analytics for IPL Match and Player Performance Using Hadoop and Apache Spark
 
-CricAnalyser is an end-to-end college **Big Data Analytics** project using **Hadoop HDFS, Apache Spark/PySpark, Spark SQL and Power BI**.
+CricAnalyser is an end-to-end college **Big Data Analytics** project using **Hadoop HDFS, Apache Spark/PySpark, Spark SQL, Power BI** and a modern **Next.js analytics dashboard**.
 
 ### Architecture
 
@@ -15,23 +15,25 @@ matches.csv + deliveries.csv
       Validation
             |
             v
+          HDFS
+            |
+            v
        PySpark Cleaning
             |
             v
-      data/cleaned/
-       Parquet files
+      Parquet datasets
             |
             v
       Spark Analytics
             |
             v
-      data/processed/
-            |
-            v
-         Power BI
+      Processed outputs
+        /           \
+       v             v
+   Power BI      Next.js Dashboard
 ```
 
-HDFS provides the distributed storage layer. The local Parquet/CSV path keeps development reproducible on Windows.
+HDFS and Spark form the Big Data processing layer. The web dashboard consumes the same processed analytical schema. For cloud demonstration, a small committed demo snapshot is used because normal web hosting does not run the local Hadoop/Spark stack.
 
 ## Analytics implemented
 
@@ -59,40 +61,29 @@ Two files are required in `data/raw/`:
 ### deliveries.csv
 `match_id, season, inning, over, ball, batting_team, bowling_team, batter, bowler, batsman_runs, extra_runs, total_runs, extra_type, is_wicket, player_dismissed, dismissal_type`
 
-The project dataset used during development contains approximately **1,044 matches and 251,951 delivery records**, spanning **2008–2025**. It is treated as an **IPL-style educational/synthetic dataset** unless independently verified against official historical IPL records.
+The development dataset contains approximately **1,044 matches and 251,951 delivery records**, spanning **2008–2025**. It is treated as an **IPL-style educational/synthetic dataset** unless independently verified against official historical records.
 
 ## Repository structure
 
 ```
 CricAnalyser/
-├── config/
-│   └── project_config.json
+├── app/                    # Next.js dashboard + analytics API
+├── config/                 # project configuration
 ├── data/
-│   ├── raw/                  # local input CSVs; ignored by Git
-│   ├── cleaned/              # generated Parquet
-│   └── processed/            # Power BI-ready outputs
-├── hadoop/
-│   ├── create_hdfs_dirs.ps1
-│   └── upload_to_hdfs.ps1
-├── spark/
-│   ├── ipl_pipeline.py
-│   └── spark_sql_queries.py
-├── src/
-│   ├── data_cleaning/
-│   │   ├── validate_raw.py
-│   │   └── clean_data.py
-│   └── ml/
-│       └── score_predictor.py
-├── dashboard/
-│   └── POWER_BI_GUIDE.md
-├── docs/
-│   ├── DATA_DICTIONARY.md
-│   └── PROJECT_REPORT.md
-├── tests/
-│   └── test_project.py
+│   ├── raw/                # local input CSVs; ignored by Git
+│   ├── cleaned/            # generated Parquet
+│   ├── processed/          # local Spark outputs; ignored by Git
+│   └── demo/processed/     # small deployable demonstration snapshot
+├── hadoop/                 # HDFS setup/upload scripts
+├── spark/                  # Spark analytics + Spark SQL + HDFS job
+├── src/                    # validation, cleaning and optional ML
+├── dashboard/              # Power BI guide
+├── docs/                   # report, data dictionary and deployment guide
+├── tests/                  # project tests
+├── .github/workflows/      # automated Next.js build check
 ├── run_pipeline.ps1
 ├── requirements.txt
-└── README.md
+└── package.json
 ```
 
 ## Windows setup
@@ -104,7 +95,7 @@ git clone https://github.com/kabugadeShivam/CricAnalyser.git
 cd CricAnalyser
 ```
 
-### 2. Virtual environment
+### 2. Python environment
 
 ```powershell
 py -m venv .venv
@@ -124,19 +115,19 @@ data/raw/deliveries.csv
 
 The raw CSVs are intentionally excluded from Git because the ball-by-ball file is large.
 
-### 4. Validate raw data
+### 4. Validate
 
 ```powershell
 python src\\data_cleaning\\validate_raw.py
 ```
 
-### 5. Clean and transform with PySpark
+### 5. Clean with PySpark
 
 ```powershell
 python src\\data_cleaning\\clean_data.py
 ```
 
-This creates:
+Creates:
 
 ```
 data/cleaned/matches/
@@ -151,7 +142,7 @@ Both are **Parquet** datasets.
 spark-submit spark\\ipl_pipeline.py
 ```
 
-Outputs are written under `data/processed/`:
+Outputs:
 
 - `batting`
 - `batting_consistency`
@@ -164,8 +155,6 @@ Outputs are written under `data/processed/`:
 - `season_overview`
 
 ### 7. One-command pipeline
-
-After Spark is installed and available on PATH:
 
 ```powershell
 .\\run_pipeline.ps1
@@ -181,7 +170,7 @@ After Hadoop is configured and NameNode/DataNode are running:
 hdfs dfs -ls -h /ipl/raw
 ```
 
-Expected HDFS layout:
+Expected layout:
 
 ```
 /ipl/raw
@@ -191,32 +180,46 @@ Expected HDFS layout:
 
 ### 9. Spark SQL
 
-After cleaning:
-
 ```powershell
 spark-submit spark\\spark_sql_queries.py
 ```
 
-This demonstrates Spark SQL queries for season totals, top batters, top bowlers and venue scoring.
+### 10. Run the web dashboard
 
-### 10. Power BI
+```powershell
+npm install
+npm run build
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+The dashboard contains:
+
+1. **Overview**
+2. **Batting**
+3. **Bowling**
+4. **Teams**
+5. **Venues**
+6. **Insights**
+
+The API first looks for local Spark output and otherwise uses the committed demonstration snapshot.
+
+### 11. Power BI
 
 Follow [dashboard/POWER_BI_GUIDE.md](dashboard/POWER_BI_GUIDE.md).
 
-Recommended pages:
-
-1. **IPL Overview**
-2. **Batting Analysis**
-3. **Bowling & Team Analysis**
-4. **Match & Venue Analysis**
-
-### 11. Optional ML
+### 12. Optional ML
 
 ```powershell
 spark-submit src\\ml\\score_predictor.py
 ```
 
-The ML extension predicts first-innings final score from intermediate match state features. It is intentionally separate from the core Big Data pipeline.
+## Cloud deployment
+
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+
+The Next.js application is structured for **Vercel deployment**. No environment variables are required for the dashboard demo. The cloud version uses the committed demo snapshot while the full Hadoop/Spark pipeline remains reproducible locally.
 
 ## Data quality handling
 
@@ -235,20 +238,22 @@ The cleaning stage performs:
 
 Use [docs/PROJECT_REPORT.md](docs/PROJECT_REPORT.md) as the report structure and [docs/DATA_DICTIONARY.md](docs/DATA_DICTIONARY.md) for the dataset chapter.
 
-## Status
+## Demonstration status
 
-- [x] Project architecture
-- [x] Dataset schema
-- [x] Validation
+- [x] Big Data architecture
+- [x] Dataset schema and validation
 - [x] PySpark cleaning
 - [x] Spark analytics
 - [x] Spark SQL
 - [x] HDFS scripts
 - [x] Power BI design
 - [x] Optional ML extension
-- [x] Modern Next.js analytics dashboard
-- [x] Dashboard API connected to Spark processed outputs
-- [x] Interactive Overview/Batting/Bowling/Teams/Venues/Insights views
-- [ ] Run the full pipeline on the user's Windows machine
-- [ ] Build and export the final Power BI dashboard
-- [ ] Add screenshots and measured results to the report
+- [x] Modern Next.js dashboard
+- [x] Dashboard API
+- [x] Deployable demo analytics snapshot
+- [x] Deployment guide
+- [x] Automated Next.js build workflow
+
+**Ready for demonstration and deployment.**
+
+> Data note: the dataset is treated as IPL-style educational/synthetic data. Do not present generated values as verified official IPL statistics.
